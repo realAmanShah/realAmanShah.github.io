@@ -3,19 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aman Shah | Portfolio</title>
+    <title>Aman Shah | Systems & Software Explorer</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f4f4f9;
-            color: #333;
-            padding: 50px;
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131a26;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
         }
-        h1 { color: #007acc; }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .profile-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            letter-spacing: -0.05em;
+        }
+
+        .profile-title span {
+            color: var(--accent-color);
+        }
+
+        .subtitle-typewriter {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            min-height: 25px;
+            font-family: monospace;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .grid-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .grid-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            background: rgba(56, 189, 248, 0.08);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: var(--accent-color);
+            padding: 10px 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--accent-color);
+            color: var(--bg-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
+
+    <div class="container">
+        <header>
+            <h1 class="profile-title">Aman <span>Shah</span></h1>
+            <div class="subtitle-typewriter" id="typewriter"></div>
+        </header>
+
+        <section id="about">
+            <h2>⚡ About Me</h2>
+            <p>I am an aspiring software engineer and deep tech enthusiast driven by an intense curiosity to understand exactly how things operate behind the scenes—whether analyzing core execution models inside complex software platforms or studying the mathematical mechanics of physical machinery.</p>
+            <p>Currently focusing heavily on engineering mathematics, algorithmic patterns, and advanced physics, my long-term goal is to build disruptive technology systems, step into foundational software architecture roles, and launch technical ventures that scale globally.</p>
+        </section>
+
+        <section id="focus">
+            <h2>🔭 Core Interests & Explorations</h2>
+            <div class="grid">
+                <div class="grid-item">
+                    <h3>Systems & Code Architecture</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Analyzing open-source frameworks, exploring custom application patching environments, and reverse-engineering logic layers.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Physics & Aerospace Dynamics</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Fascinated by high-level mechanics, cosmic frameworks, and planetary exploration architectures.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Strategic Logic</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Practicing strategic patterns and spatial calculations through competitive chess layouts.</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Open Source Contribution</h3>
+                    <p style="font-size: 0.9rem; margin: 0;">Actively analyzing community-driven tools, contributing code pathways to frameworks like SponsorBlock, and evaluating modding systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="connect">
+            <h2>🌐 Connect Network</h2>
+            <p>Feel free to track my current deployments, codebase explorations, and active updates across my networks:</p>
+            <div class="social-links">
+                <a href="https://github.com" class="social-btn" target="_blank">🐙 GitHub</a>
+                <a href="https://linkedin.com" class="social-btn" target="_blank">💼 LinkedIn</a>
+                <a href="https://youtube.com" class="social-btn" target="_blank">📺 YouTube</a>
+                <a href="https://twitter.com" class="social-btn" target="_blank">🐦 X / Twitter</a>
+                <a href="https://t.me" class="social-btn" target="_blank">✈️ Telegram</a>
+                <a href="https://instagram.com_" class="social-btn" target="_blank">📸 Instagram</a>
+                <a href="https://chess.com" class="social-btn" target="_blank">♟️ Chess.com</a>
+                <a href="https://reddit.com" class="social-btn" target="_blank">🤖 Reddit</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>// driven by curiosity. looking toward the cosmos.</p>
+        </footer>
+    </div>
+
+    <script>
+        const words = ["Systems Explorer //", "Open Source Contributor //", "Physics Enthusiast //", "Future Tech Founder //"];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typewriter').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000);
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i];
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word = word.substring(0, word.length - 1);
+                    document.getElementById('typewriter').innerHTML = word;
+                } else {
+                    i = (i + 1) % words.length;
+                    setTimeout(typingEffect, 500);
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        typingEffect();
+    </script>
 </body>
 </html>
